@@ -1,0 +1,25 @@
+{
+  "name": "angularjs-automated-tests",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "angular-mocks": "^1.3.15",
+    "karma": "^0.12.31",
+    "karma-coverage": "^0.3.1",
+    "karma-mocha": "^0.1.10",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-sinon-chai": "^0.3.0",
+    "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "angular": "^1.3.15",
+    "angular-messages": "^1.3.15",
+    "angular-route": "^1.3.15"
+  }
+}

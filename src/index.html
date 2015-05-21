@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+  <head>
+	 <meta charset="utf-8" />
+  </head>
+  
+  <body>
+    <nav id="menu">
+      <ul>
+        <li><a href="/src/#/">Controller</a></li>
+        <li><a href="/src/#/filter.html">Filtro</a></li>
+        <li><a href="/src/#/promise.html">Promise</a></li>
+        <li><a href="/src/#/directive.html">Directive</a></li>
+        <li><a href="/src/#/form.html">Form</a></li>
+      </ul>
+    </nav>
+    <div data-ng-view></div>
+  	  
+  	<script src="/node_modules/angular/angular.js"></script>
+  	<script src="/node_modules/angular-route/angular-route.js"></script>
+  	<script src="/node_modules/angular-messages/angular-messages.js"></script>
+  
+    <!-- bootstrapping -->
+    <script src="/src/app/app.module.js"></script>
+  
+    <!-- reusable blocks / modules -->
+    <script src="/src/app/blocks/router/router.module.js"></script>
+    <script src="/src/app/blocks/router/routehelper.js"></script>
+  
+    <!-- core module -->
+    <script src="/src/app/core/core.module.js"></script>
+    <script src="/src/app/core/config.js"></script>
+      
+    <!-- my-module -->
+    <script src="/src/app/my-module/my-module.module.js"></script>
+    <script src="/src/app/my-module/config-route.js"></script>
+    <script src="/src/app/my-module/my-module.filters.js"></script>
+    <script src="/src/app/my-module/my-module.directives.js"></script>
+    <script src="/src/app/my-module/my-module.service.js"></script>
+    <script src="/src/app/my-module/my-module.js"></script>
+  </body>
+</html>

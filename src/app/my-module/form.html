@@ -1,0 +1,57 @@
+<p>Entre com os seus dados.</p>
+
+<p data-ng-if="vm.sucesso" id="mensagem-sucesso">{{ vm.sucesso }}</p>
+
+<form name='form' data-ng-if="!vm.sucesso" novalidate data-ng-submit="vm.enviar(form.$valid)">
+	<fieldset>
+		
+		<div>
+			<label for="nome">Nome:</label>
+			<input
+				type="text"
+				id="nome"
+				name="nome"
+				required
+				data-ng-model="vm.nome" />
+				
+			<div
+				data-ng-messages="form.nome.$error"
+				data-ng-if="form.nome.$dirty || form.$submitted">
+				
+				<small data-ng-message="required">
+					Digite o nome.
+				</small>
+				
+			</div>
+		</div>
+		
+		<div>
+			<label for="email">E-mail:</label>
+			<input
+				type="email"
+				id="email"
+				name="email"
+				required
+				data-ng-model="vm.email" />
+				
+			<div
+				data-ng-messages="form.email.$error"
+				data-ng-if="form.email.$dirty || form.$submitted">
+				
+				<small class="email-required" data-ng-message="required">
+					Digite o e-mail.
+				</small>
+				
+				<small class="email-invalid" data-ng-message="email">
+          E-mail inválido.
+        </small>
+				
+			</div>
+		</div>
+		
+		<div>
+			<button id="enviar">Entrar</button>
+		</div>
+		
+	</fieldset>
+</form>
